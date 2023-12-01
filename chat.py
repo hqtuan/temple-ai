@@ -1,9 +1,21 @@
+import time
 import streamlit as st
 from openai import OpenAI
+
+
+st.set_page_config(
+   page_title="Template AI",
+   page_icon="🧊",
+   layout="wide",
+   initial_sidebar_state="expanded"
+)
+
 st.title("ChatGPT 3.5")
 
-st.markdown(link,unsafe_allow_html=True)
-import time
+# Sidebar
+with st.sidebar:
+    add_title = st.title("Temple AI",)
+    add_logo = st.image('logo.png', width=180)
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
